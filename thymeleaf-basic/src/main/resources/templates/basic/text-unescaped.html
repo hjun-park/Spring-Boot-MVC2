@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>text vs utext</h1>
+<ul>
+  <li>th:text = <span th:text="${data}"></span></li>
+  <!-- 01-02. th:utext는 escape 기능을 적용하지 말란 얘기 -->
+  <li>th:utext = <span th:utext="${data}"></span></li>
+</ul>
+<h1><span th:inline="none">[[...]] vs [(...)]</span></h1>
+<ul>
+  <li><span th:inline="none">[[...]] = </span>[[${data}]]</li>
+
+  <!-- 01-03. escape 기능 적용되지 않아 진한 글씨가 보임 -->
+  <li><span th:inline="none">[(...)] = </span>[(${data})]</li>
+</ul>
+</body>
+</html>
